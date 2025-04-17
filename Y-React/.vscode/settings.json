@@ -1,0 +1,10 @@
+{
+  "json.schemas": [
+
+  ],
+  "tailwindCSS.includeLanguages": {
+    "css": "html",
+    "javascript": "html"
+  },
+  "tailwindCSS.experimental.configFile": "./tailwind.config.js"
+}
