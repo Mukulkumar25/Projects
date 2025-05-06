@@ -56,7 +56,6 @@ class Header extends HTMLElement{
 										<li class="">
 											<a class="" href="./Spotify-songs/songs.html">Welcome</a> 
 										</li>
-								
 									</ul>
 								</div>
 							</li>
