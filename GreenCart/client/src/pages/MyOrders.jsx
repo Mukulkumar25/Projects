@@ -45,11 +45,12 @@ const MyOrders = () => {
 
                       <div className='flex items-center mb-4 md:mb-0'>
                         <div className='bg-primary/10 p-4 rounded-lg'>
-                         <img src={item.product.image[0]} alt="" className='w-16 h-16' />
+                         {/* <img src={item.product.image[0]} alt="" className='w-16 h-16' /> */}
+                         <img src={item.product?.image?.[0] || "/fallback.png"} alt="" className='w-16 h-16' />
                          </div>
                          <div className='ml-4'>
-                            <h2 className='text-xl font-medium text-gray-800'>{item.product.name}</h2>
-                            <p>Category: {item.product.category}</p>
+                            <h2 className='text-xl font-medium text-gray-800'>{item.product?.name || "Unnamed Product"}</h2>
+                            <p>Category: {item.product?.category || "Unknown Product"}</p>
                          </div>
                        </div>
 

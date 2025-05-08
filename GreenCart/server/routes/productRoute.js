@@ -9,5 +9,7 @@ productRouter.post('/add', upload.array(["images"]), authSeller, addProduct);
 productRouter.get('/list', productList)
 productRouter.get('/id', productById)
 productRouter.post('/stock', authSeller, changeStock)
+// productRouter.delete('/product/:id', deleteProduct);
+// productRouter.delete('/:id', authSeller, deleteProduct);
 
 export default productRouter;

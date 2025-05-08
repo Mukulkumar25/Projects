@@ -64,12 +64,16 @@ const ProductList = () => {
                                             <span className="dot absolute left-1 top-1 w-5 h-5 bg-white rounded-full transition-transform duration-200 ease-in-out peer-checked:translate-x-5"></span>
                                         </label>
                                     </td>
-                                    <td className="px-4 py-3 font-extrabold text-red-700 cursor-pointer hover:text-red-600 transition-colors duration-200 ease-in-out "
+                                    <td >
+                                    <button className="px-4 py-3 font-extrabold text-gray-300 cursor-pointer hover:text-gray-600 transition-colors duration-200 ease-in-out"
+                                     onClick={() => setEditProduct(product)}>Edit</button>
+                                    </td>
+                                    {/* <td className="px-4 py-3 font-extrabold text-red-700 cursor-pointer hover:text-red-600 transition-colors duration-200 ease-in-out "
                                     onClick={async ()=>{
                                         deleteProduct(product._id)}} 
                                     >
                                         X
-                                    </td>
+                                    </td> */}
 
                                 </tr>
                             ))}

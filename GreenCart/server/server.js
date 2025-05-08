@@ -11,29 +11,22 @@ import cartRouter from './routes/cartRoute.js';
 import addressRouter from './routes/addressRoute.js';
 import orderRouter from './routes/orderRoute.js';
 import { stripeWebhooks } from './controllers/orderController.js';
-import cors from 'cors';
-
-
 
 const app = express();
 const port = process.env.PORT || 4000;
 
-const allowedOrigins = ['http://localhost:5173', '']
-app.use(cors({
-    origin: 'http://localhost:5173/',  // <-- your Netlify URL
-    credentials: true
-}));
 await connectDB()
 await connectCloudinary()
 
 // Allow multiple origins
+const allowedOrigins = ['http://localhost:5173']
 
-app.post('/stripe', express.raw({type: 'application/json'}), stripeWebhooks)
 
 // Middleware configuration
+app.use(cors({origin: allowedOrigins, credentials: true}));
+app.post('/stripe', express.raw({type: 'application/json'}), stripeWebhooks)
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({origin: allowedOrigins, credentials: true}));
 
 
 app.get('/', (req, res) => res.send("API is Working"));
