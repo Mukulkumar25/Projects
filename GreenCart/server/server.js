@@ -19,7 +19,7 @@ await connectDB()
 await connectCloudinary()
 
 // Allow multiple origins
-const allowedOrigins = ['http://localhost:5173', 'https://greencart-1inf.onrender.com']
+const allowedOrigins = ['http://localhost:5173', 'https://greencart-frontend-6n8s.onrender.com']
 
 
 // Middleware configuration
